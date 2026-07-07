@@ -1,52 +1,273 @@
-# Sustainable Waste Management Assistant Using Generative AI
+# 🌍 EcoSense – Sustainable Waste Management Assistant Using Generative AI
 
-An AI-powered civic platform designed to help citizens identify household waste items, discover step-by-step sorting instructions, locate nearby dropoff facilities via maps, and monitor recycling progress. 
-
-This repository is structured according to the **AI Specialist Track Project Template** standards, organized into 8 distinct engineering lifecycle stages.
+EcoSense is an AI-powered web application that helps users identify household waste, receive intelligent disposal guidance, locate nearby recycling centers, and track their sustainability efforts. Powered by **Generative AI (Llama 3.3 via Groq)**, EcoSense promotes responsible waste management through smart recommendations, interactive maps, and insightful analytics.
 
 ---
 
-## 📂 Repository Structure
+## 🌟 Key Features
 
-* **[1. Brainstorming & Ideation](file:///C:/Users/sande/.gemini/antigravity/scratch/Sustainable-Waste-Management-AI-Assistant/1.%20Brainstorming%20&%20Ideation/)**: Empathy maps, prioritization, and problem statements.
-* **[2. Requirement Analysis](file:///C:/Users/sande/.gemini/antigravity/scratch/Sustainable-Waste-Management-AI-Assistant/2.%20Requirement%20Analysis/)**: Functional/non-functional requirements, data flow diagram (DFD), customer journey map, and tech stack sheets.
-* **[3. Project Design Phase](file:///C:/Users/sande/.gemini/antigravity/scratch/Sustainable-Waste-Management-AI-Assistant/3.%20Project%20Design%20Phase/)**: Problem-solution fit matrices.
-* **[4. Project Planning Phase](file:///C:/Users/sande/.gemini/antigravity/scratch/Sustainable-Waste-Management-AI-Assistant/4.%20Project%20Planning%20Phase/)**: Sprint planning, timeline Gantt layout.
-* **[5. Project Development Phase](file:///C:/Users/sande/.gemini/antigravity/scratch/Sustainable-Waste-Management-AI-Assistant/5.%20Project%20Development%20Phase/)**: Staging directory containing full production code for the Flask backend and React client.
-* **[6. Performance Testing](file:///C:/Users/sande/.gemini/antigravity/scratch/Sustainable-Waste-Management-AI-Assistant/6.%20Performance%20Testing/)**: Automated backend unit test results and latency tables.
-* **[7. Documentation & Demo](file:///C:/Users/sande/.gemini/antigravity/scratch/Sustainable-Waste-Management-AI-Assistant/7.%20Documentation%20&%20Demo/)**: Deploy specifications, installation manuals, and live server endpoints.
-* **[8. Project Demonstration](file:///C:/Users/sande/.gemini/antigravity/scratch/Sustainable-Waste-Management-AI-Assistant/8.%20Project%20Demonstration/)**: Future scalability plans (Edge CV, PWAs) and community environmental impact.
+### 🧠 AI-Powered Waste Scanner
+- Classifies household waste using **Llama 3.3 (Groq AI)**
+- Detects Plastic, Paper, Glass, Metal, Organic, E-waste, Hazardous Waste, and more
+- Provides disposal instructions and recycling recommendations
+- Generates sustainability tips for environmentally friendly disposal
+
+### 🗺️ Interactive Recycling Map
+- Built with **Leaflet.js**
+- Displays nearby recycling centers, hazardous waste facilities, and compost locations
+- Color-coded markers for different disposal categories
+- Provides location details, accepted materials, and contact information
+
+### 📊 Sustainability Analytics Dashboard
+- Interactive visualizations powered by **Chart.js**
+- Doughnut Chart for recyclable vs. non-recyclable waste
+- Bar Chart for waste category distribution
+- Line Chart showing weekly scanning activity
+- KPI cards displaying recycling statistics and sustainability metrics
+
+### 📜 Scan History Management
+- Automatically stores previous scans
+- View complete waste classification history
+- Delete individual records or clear the entire history
+- Track personal recycling progress over time
+
+### 🛡️ Offline Fallback Mode
+- Automatically switches to a local JSON database when cloud services are unavailable
+- Continues working without requiring Groq or Firebase credentials
+- Ensures uninterrupted user experience
 
 ---
 
-## 🌐 Live Application Links
+# 📂 Repository Structure
 
-* **Live Unified Web Application (Render)**: 
-  👉 **[https://sustainable-waste-management-amrn.onrender.com/](https://sustainable-waste-management-amrn.onrender.com/)**
-* **Live Static Frontend Client (GitHub Pages mirror)**: 
-  👉 **[https://lokeshkodamanchili.github.io/Sustainable-Waste-Management/](https://lokeshkodamanchili.github.io/Sustainable-Waste-Management/)**
-* **Flask API Health Check**: 
-  👉 **[https://sustainable-waste-management-amrn.onrender.com/api/health](https://sustainable-waste-management-amrn.onrender.com/api/health)**
+```text
+EcoSense/
+│
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+│
+├── 1. Brainstorming & Ideation/
+├── 2. Requirement Analysis/
+├── 3. Project Design Phase/
+├── 4. Project Planning Phase/
+├── 5. Project Development Phase/
+│   ├── backend/
+│   └── frontend/
+├── 6. Performance Testing/
+├── 7. Documentation & Demo/
+│   ├── Project Documentation/
+│   ├── Video Demonstration/
+│   └── Project Demo Link/
+├── 8. Project Demonstration/
+│   ├── Live Website Screenshots/
+│   └── Scalability & Future Plan/
+│
+├── backend/
+│   ├── services/
+│   ├── tests/
+│   ├── app.py
+│   ├── requirements.txt
+│   └── .env.template
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   ├── vite.config.js
+│   └── index.html
+│
+├── .gitignore
+└── README.md
+```
 
 ---
 
-## 🚀 Quick Local Setup Guide
+# 📁 Project Folder Overview
 
-1. **Backend Server Setup**:
-   ```bash
-   cd "5. Project Development Phase/backend"
-   python -m venv venv
-   # On Windows:
-   .\venv\Scripts\Activate.ps1
-   # On macOS/Linux:
-   source venv/bin/activate
-   pip install -r requirements.txt
-   python app.py
-   ```
-2. **Frontend client**:
-   ```bash
-   cd "5. Project Development Phase/frontend"
-   npm install
-   npm run dev
-   ```
-3. Open your browser to `http://localhost:5173`. Select **System Settings** and click **Seed Sample Dataset** to populate the charts and maps!
+| Folder | Description |
+|---------|-------------|
+| **1. Brainstorming & Ideation** | Idea generation, problem identification, empathy map, and prioritization. |
+| **2. Requirement Analysis** | Functional requirements, DFDs, customer journey maps, and technology stack. |
+| **3. Project Design Phase** | System architecture and problem-solution fit documentation. |
+| **4. Project Planning Phase** | Project planning, milestones, and development timeline. |
+| **5. Project Development Phase** | Complete frontend and backend source code. |
+| **6. Performance Testing** | API testing, unit testing, and performance evaluation reports. |
+| **7. Documentation & Demo** | Project documentation, installation guide, and video demonstration. |
+| **8. Project Demonstration** | Live screenshots, scalability roadmap, and future enhancement plans. |
+
+---
+
+# 💻 Technology Stack
+
+### Frontend
+- React.js
+- Vite
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+- Flask
+- Python
+
+### AI & Cloud
+- Groq AI
+- Llama 3.3
+- Firebase (Optional)
+- Local JSON Database (Offline Mode)
+
+### Visualization & Mapping
+- Leaflet.js
+- Chart.js
+
+---
+
+# 🌐 Live Application
+
+| Service | Link |
+|---------|------|
+| 🌍 Live Web Application | https://sustainable-waste-management-amrn.onrender.com/ |
+| ⚛️ Frontend (GitHub Pages) | https://lokeshkodamanchili.github.io/Sustainable-Waste-Management/ |
+| ❤️ API Health Check | https://sustainable-waste-management-amrn.onrender.com/api/health |
+
+---
+
+# 🚀 Quick Local Setup
+
+## 1️⃣ Clone the Repository
+
+```bash
+git clone <repository-url>
+cd EcoSense
+```
+
+---
+
+## 2️⃣ Backend Setup
+
+```bash
+cd backend
+
+python -m venv venv
+```
+
+### Activate Virtual Environment
+
+**Windows**
+
+```powershell
+.\venv\Scripts\Activate.ps1
+```
+
+**Linux / macOS**
+
+```bash
+source venv/bin/activate
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Start Flask Server
+
+```bash
+python app.py
+```
+
+Backend runs at:
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+## 3️⃣ Frontend Setup
+
+Open another terminal.
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+Open:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 4️⃣ Environment Variables
+
+Copy
+
+```
+.env.template
+```
+
+to
+
+```
+.env
+```
+
+and configure:
+
+```env
+GROQ_API_KEY=your_key
+FIREBASE_KEY=your_key
+```
+
+If no keys are provided, EcoSense automatically switches to **Offline Mode** using the local database.
+
+---
+
+## 5️⃣ Load Sample Data
+
+After launching the application:
+
+1. Open **Settings**
+2. Click **Seed Sample Dataset**
+3. Demo waste records will be generated automatically
+4. Analytics charts and scan history will be populated instantly
+
+---
+
+# 🎯 Core Modules
+
+- 🧠 AI Waste Classification
+- ♻️ Recycling Recommendations
+- 🗺️ Recycling Center Locator
+- 📊 Sustainability Analytics
+- 📜 Scan History
+- ⚙️ Settings & Data Management
+
+---
+
+# 📈 Future Enhancements
+
+- 📷 Image-based waste detection
+- 🌍 Real-time recycling center integration
+- 📱 Mobile application
+- 🔐 User authentication
+- ☁️ Cloud database synchronization
+- 🌎 Multi-language support
+- 🔔 Smart recycling reminders
+- 📊 Advanced sustainability reports
+
+---
+
+# 👨‍💻 Developed For
+
+**EcoSense – Sustainable Waste Management Assistant Using Generative AI**
+
+An AI-powered solution that promotes responsible waste disposal, sustainable recycling practices, and environmental awareness through intelligent classification, interactive mapping, and real-time analytics.
